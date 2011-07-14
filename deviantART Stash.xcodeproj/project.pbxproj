@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F96091713CECDFC003821AA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F96091613CECDFC003821AA /* MobileCoreServices.framework */; };
+		8F96093813CF8A7B003821AA /* icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F96093713CF8A7B003821AA /* icon-57.png */; };
+		8F96093A13CF8A97003821AA /* icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F96093913CF8A97003821AA /* icon-114.png */; };
+		8F96093E13CF8ABD003821AA /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F96093D13CF8ABD003821AA /* icon-72.png */; };
+		8FE5F56A13CE3FD700CC895A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE5F56913CE3FD700CC895A /* UIKit.framework */; };
+		8FE5F56C13CE3FD700CC895A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE5F56B13CE3FD700CC895A /* Foundation.framework */; };
+		8FE5F56E13CE3FD700CC895A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE5F56D13CE3FD700CC895A /* CoreGraphics.framework */; };
+		8FE5F57413CE3FD700CC895A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5F57213CE3FD700CC895A /* InfoPlist.strings */; };
+		8FE5F57713CE3FD700CC895A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F57613CE3FD700CC895A /* main.m */; };
+		8FE5F57A13CE3FD700CC895A /* stashAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F57913CE3FD700CC895A /* stashAppDelegate.m */; };
+		8FE5F57D13CE3FD700CC895A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5F57B13CE3FD700CC895A /* MainWindow.xib */; };
+		8FE5F58013CE3FD700CC895A /* stashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F57F13CE3FD700CC895A /* stashViewController.m */; };
+		8FE5F58313CE3FD700CC895A /* stashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5F58113CE3FD700CC895A /* stashViewController.xib */; };
+		8FE5F5A613CE404800CC895A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F58C13CE404800CC895A /* JSONKit.m */; };
+		8FE5F5A713CE404800CC895A /* NSData+NXOAuth2.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F58F13CE404800CC895A /* NSData+NXOAuth2.m */; };
+		8FE5F5A813CE404800CC895A /* NSString+NXOAuth2.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F59113CE404800CC895A /* NSString+NXOAuth2.m */; };
+		8FE5F5A913CE404800CC895A /* NSURL+NXOAuth2.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F59313CE404800CC895A /* NSURL+NXOAuth2.m */; };
+		8FE5F5AA13CE404800CC895A /* NXOAuth2AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F59613CE404800CC895A /* NXOAuth2AccessToken.m */; };
+		8FE5F5AB13CE404800CC895A /* NXOAuth2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F59813CE404800CC895A /* NXOAuth2Client.m */; };
+		8FE5F5AC13CE404800CC895A /* NXOAuth2Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F59B13CE404800CC895A /* NXOAuth2Connection.m */; };
+		8FE5F5AD13CE404800CC895A /* NXOAuth2Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F59E13CE404800CC895A /* NXOAuth2Constants.m */; };
+		8FE5F5AE13CE404800CC895A /* NXOAuth2FileStreamWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F5A013CE404800CC895A /* NXOAuth2FileStreamWrapper.m */; };
+		8FE5F5AF13CE404800CC895A /* NXOAuth2PostBodyPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F5A213CE404800CC895A /* NXOAuth2PostBodyPart.m */; };
+		8FE5F5B013CE404800CC895A /* NXOAuth2PostBodyStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F5A413CE404800CC895A /* NXOAuth2PostBodyStream.m */; };
+		8FE5F5B413CE409A00CC895A /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5F5B213CE409A00CC895A /* MainWindow-iPad.xib */; };
+		8FE5F5B713CE40D700CC895A /* DeviantArt.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F5B613CE40D700CC895A /* DeviantArt.m */; };
+		8FE5F5B913CE431700CC895A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE5F5B813CE431700CC895A /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8F96091613CECDFC003821AA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		8F96093713CF8A7B003821AA /* icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-57.png"; path = "../icon-57.png"; sourceTree = "<group>"; };
+		8F96093913CF8A97003821AA /* icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-114.png"; path = "../icon-114.png"; sourceTree = "<group>"; };
+		8F96093D13CF8ABD003821AA /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "../icon-72.png"; sourceTree = "<group>"; };
+		8FE5F56513CE3FD700CC895A /* deviantART Stash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "deviantART Stash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FE5F56913CE3FD700CC895A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8FE5F56B13CE3FD700CC895A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8FE5F56D13CE3FD700CC895A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8FE5F57113CE3FD700CC895A /* deviantART Stash-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "deviantART Stash-Info.plist"; sourceTree = "<group>"; };
+		8FE5F57313CE3FD700CC895A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8FE5F57513CE3FD700CC895A /* deviantART Stash-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "deviantART Stash-Prefix.pch"; sourceTree = "<group>"; };
+		8FE5F57613CE3FD700CC895A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8FE5F57813CE3FD700CC895A /* stashAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stashAppDelegate.h; sourceTree = "<group>"; };
+		8FE5F57913CE3FD700CC895A /* stashAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = stashAppDelegate.m; sourceTree = "<group>"; };
+		8FE5F57C13CE3FD700CC895A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		8FE5F57E13CE3FD700CC895A /* stashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stashViewController.h; sourceTree = "<group>"; };
+		8FE5F57F13CE3FD700CC895A /* stashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = stashViewController.m; sourceTree = "<group>"; };
+		8FE5F58213CE3FD700CC895A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/stashViewController.xib; sourceTree = "<group>"; };
+		8FE5F58B13CE404800CC895A /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		8FE5F58C13CE404800CC895A /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		8FE5F58E13CE404800CC895A /* NSData+NXOAuth2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NXOAuth2.h"; sourceTree = "<group>"; };
+		8FE5F58F13CE404800CC895A /* NSData+NXOAuth2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NXOAuth2.m"; sourceTree = "<group>"; };
+		8FE5F59013CE404800CC895A /* NSString+NXOAuth2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NXOAuth2.h"; sourceTree = "<group>"; };
+		8FE5F59113CE404800CC895A /* NSString+NXOAuth2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NXOAuth2.m"; sourceTree = "<group>"; };
+		8FE5F59213CE404800CC895A /* NSURL+NXOAuth2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+NXOAuth2.h"; sourceTree = "<group>"; };
+		8FE5F59313CE404800CC895A /* NSURL+NXOAuth2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+NXOAuth2.m"; sourceTree = "<group>"; };
+		8FE5F59413CE404800CC895A /* NXOAuth2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2.h; sourceTree = "<group>"; };
+		8FE5F59513CE404800CC895A /* NXOAuth2AccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2AccessToken.h; sourceTree = "<group>"; };
+		8FE5F59613CE404800CC895A /* NXOAuth2AccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2AccessToken.m; sourceTree = "<group>"; };
+		8FE5F59713CE404800CC895A /* NXOAuth2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2Client.h; sourceTree = "<group>"; };
+		8FE5F59813CE404800CC895A /* NXOAuth2Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2Client.m; sourceTree = "<group>"; };
+		8FE5F59913CE404800CC895A /* NXOAuth2ClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2ClientDelegate.h; sourceTree = "<group>"; };
+		8FE5F59A13CE404800CC895A /* NXOAuth2Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2Connection.h; sourceTree = "<group>"; };
+		8FE5F59B13CE404800CC895A /* NXOAuth2Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2Connection.m; sourceTree = "<group>"; };
+		8FE5F59C13CE404800CC895A /* NXOAuth2ConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2ConnectionDelegate.h; sourceTree = "<group>"; };
+		8FE5F59D13CE404800CC895A /* NXOAuth2Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2Constants.h; sourceTree = "<group>"; };
+		8FE5F59E13CE404800CC895A /* NXOAuth2Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2Constants.m; sourceTree = "<group>"; };
+		8FE5F59F13CE404800CC895A /* NXOAuth2FileStreamWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2FileStreamWrapper.h; sourceTree = "<group>"; };
+		8FE5F5A013CE404800CC895A /* NXOAuth2FileStreamWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2FileStreamWrapper.m; sourceTree = "<group>"; };
+		8FE5F5A113CE404800CC895A /* NXOAuth2PostBodyPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2PostBodyPart.h; sourceTree = "<group>"; };
+		8FE5F5A213CE404800CC895A /* NXOAuth2PostBodyPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2PostBodyPart.m; sourceTree = "<group>"; };
+		8FE5F5A313CE404800CC895A /* NXOAuth2PostBodyStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2PostBodyStream.h; sourceTree = "<group>"; };
+		8FE5F5A413CE404800CC895A /* NXOAuth2PostBodyStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXOAuth2PostBodyStream.m; sourceTree = "<group>"; };
+		8FE5F5A513CE404800CC895A /* NXOAuth2TrustDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXOAuth2TrustDelegate.h; sourceTree = "<group>"; };
+		8FE5F5B313CE409A00CC895A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		8FE5F5B513CE40D700CC895A /* DeviantArt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviantArt.h; sourceTree = "<group>"; };
+		8FE5F5B613CE40D700CC895A /* DeviantArt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviantArt.m; sourceTree = "<group>"; };
+		8FE5F5B813CE431700CC895A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FE5F56213CE3FD700CC895A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F96091713CECDFC003821AA /* MobileCoreServices.framework in Frameworks */,
+				8FE5F5B913CE431700CC895A /* Security.framework in Frameworks */,
+				8FE5F56A13CE3FD700CC895A /* UIKit.framework in Frameworks */,
+				8FE5F56C13CE3FD700CC895A /* Foundation.framework in Frameworks */,
+				8FE5F56E13CE3FD700CC895A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F96093613CF8A67003821AA /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				8F96093D13CF8ABD003821AA /* icon-72.png */,
+				8F96093913CF8A97003821AA /* icon-114.png */,
+				8F96093713CF8A7B003821AA /* icon-57.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
+		8FE5F55A13CE3FD700CC895A = {
+			isa = PBXGroup;
+			children = (
+				8FE5F56F13CE3FD700CC895A /* stash */,
+				8FE5F58913CE404800CC895A /* vendor */,
+				8FE5F56813CE3FD700CC895A /* Frameworks */,
+				8FE5F56613CE3FD700CC895A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8FE5F56613CE3FD700CC895A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FE5F56513CE3FD700CC895A /* deviantART Stash.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FE5F56813CE3FD700CC895A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F96091613CECDFC003821AA /* MobileCoreServices.framework */,
+				8FE5F5B813CE431700CC895A /* Security.framework */,
+				8FE5F56913CE3FD700CC895A /* UIKit.framework */,
+				8FE5F56B13CE3FD700CC895A /* Foundation.framework */,
+				8FE5F56D13CE3FD700CC895A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FE5F56F13CE3FD700CC895A /* stash */ = {
+			isa = PBXGroup;
+			children = (
+				8FE5F5B513CE40D700CC895A /* DeviantArt.h */,
+				8FE5F5B613CE40D700CC895A /* DeviantArt.m */,
+				8FE5F5B113CE409800CC895A /* iPad */,
+				8FE5F57813CE3FD700CC895A /* stashAppDelegate.h */,
+				8FE5F57913CE3FD700CC895A /* stashAppDelegate.m */,
+				8FE5F57B13CE3FD700CC895A /* MainWindow.xib */,
+				8FE5F57E13CE3FD700CC895A /* stashViewController.h */,
+				8FE5F57F13CE3FD700CC895A /* stashViewController.m */,
+				8FE5F58113CE3FD700CC895A /* stashViewController.xib */,
+				8FE5F57013CE3FD700CC895A /* Supporting Files */,
+			);
+			path = stash;
+			sourceTree = "<group>";
+		};
+		8FE5F57013CE3FD700CC895A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F96093613CF8A67003821AA /* icons */,
+				8FE5F57113CE3FD700CC895A /* deviantART Stash-Info.plist */,
+				8FE5F57213CE3FD700CC895A /* InfoPlist.strings */,
+				8FE5F57513CE3FD700CC895A /* deviantART Stash-Prefix.pch */,
+				8FE5F57613CE3FD700CC895A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8FE5F58913CE404800CC895A /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				8FE5F58A13CE404800CC895A /* JSONKit */,
+				8FE5F58D13CE404800CC895A /* OAuth2Client */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		8FE5F58A13CE404800CC895A /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				8FE5F58B13CE404800CC895A /* JSONKit.h */,
+				8FE5F58C13CE404800CC895A /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		8FE5F58D13CE404800CC895A /* OAuth2Client */ = {
+			isa = PBXGroup;
+			children = (
+				8FE5F58E13CE404800CC895A /* NSData+NXOAuth2.h */,
+				8FE5F58F13CE404800CC895A /* NSData+NXOAuth2.m */,
+				8FE5F59013CE404800CC895A /* NSString+NXOAuth2.h */,
+				8FE5F59113CE404800CC895A /* NSString+NXOAuth2.m */,
+				8FE5F59213CE404800CC895A /* NSURL+NXOAuth2.h */,
+				8FE5F59313CE404800CC895A /* NSURL+NXOAuth2.m */,
+				8FE5F59413CE404800CC895A /* NXOAuth2.h */,
+				8FE5F59513CE404800CC895A /* NXOAuth2AccessToken.h */,
+				8FE5F59613CE404800CC895A /* NXOAuth2AccessToken.m */,
+				8FE5F59713CE404800CC895A /* NXOAuth2Client.h */,
+				8FE5F59813CE404800CC895A /* NXOAuth2Client.m */,
+				8FE5F59913CE404800CC895A /* NXOAuth2ClientDelegate.h */,
+				8FE5F59A13CE404800CC895A /* NXOAuth2Connection.h */,
+				8FE5F59B13CE404800CC895A /* NXOAuth2Connection.m */,
+				8FE5F59C13CE404800CC895A /* NXOAuth2ConnectionDelegate.h */,
+				8FE5F59D13CE404800CC895A /* NXOAuth2Constants.h */,
+				8FE5F59E13CE404800CC895A /* NXOAuth2Constants.m */,
+				8FE5F59F13CE404800CC895A /* NXOAuth2FileStreamWrapper.h */,
+				8FE5F5A013CE404800CC895A /* NXOAuth2FileStreamWrapper.m */,
+				8FE5F5A113CE404800CC895A /* NXOAuth2PostBodyPart.h */,
+				8FE5F5A213CE404800CC895A /* NXOAuth2PostBodyPart.m */,
+				8FE5F5A313CE404800CC895A /* NXOAuth2PostBodyStream.h */,
+				8FE5F5A413CE404800CC895A /* NXOAuth2PostBodyStream.m */,
+				8FE5F5A513CE404800CC895A /* NXOAuth2TrustDelegate.h */,
+			);
+			path = OAuth2Client;
+			sourceTree = "<group>";
+		};
+		8FE5F5B113CE409800CC895A /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				8FE5F5B213CE409A00CC895A /* MainWindow-iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8FE5F56413CE3FD700CC895A /* deviantART Stash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FE5F58613CE3FD700CC895A /* Build configuration list for PBXNativeTarget "deviantART Stash" */;
+			buildPhases = (
+				8FE5F56113CE3FD700CC895A /* Sources */,
+				8FE5F56213CE3FD700CC895A /* Frameworks */,
+				8FE5F56313CE3FD700CC895A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "deviantART Stash";
+			productName = stash;
+			productReference = 8FE5F56513CE3FD700CC895A /* deviantART Stash.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FE5F55C13CE3FD700CC895A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 8FE5F55F13CE3FD700CC895A /* Build configuration list for PBXProject "deviantART Stash" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8FE5F55A13CE3FD700CC895A;
+			productRefGroup = 8FE5F56613CE3FD700CC895A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FE5F56413CE3FD700CC895A /* deviantART Stash */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FE5F56313CE3FD700CC895A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FE5F57413CE3FD700CC895A /* InfoPlist.strings in Resources */,
+				8FE5F57D13CE3FD700CC895A /* MainWindow.xib in Resources */,
+				8FE5F58313CE3FD700CC895A /* stashViewController.xib in Resources */,
+				8FE5F5B413CE409A00CC895A /* MainWindow-iPad.xib in Resources */,
+				8F96093813CF8A7B003821AA /* icon-57.png in Resources */,
+				8F96093A13CF8A97003821AA /* icon-114.png in Resources */,
+				8F96093E13CF8ABD003821AA /* icon-72.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FE5F56113CE3FD700CC895A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FE5F57713CE3FD700CC895A /* main.m in Sources */,
+				8FE5F57A13CE3FD700CC895A /* stashAppDelegate.m in Sources */,
+				8FE5F58013CE3FD700CC895A /* stashViewController.m in Sources */,
+				8FE5F5A613CE404800CC895A /* JSONKit.m in Sources */,
+				8FE5F5A713CE404800CC895A /* NSData+NXOAuth2.m in Sources */,
+				8FE5F5A813CE404800CC895A /* NSString+NXOAuth2.m in Sources */,
+				8FE5F5A913CE404800CC895A /* NSURL+NXOAuth2.m in Sources */,
+				8FE5F5AA13CE404800CC895A /* NXOAuth2AccessToken.m in Sources */,
+				8FE5F5AB13CE404800CC895A /* NXOAuth2Client.m in Sources */,
+				8FE5F5AC13CE404800CC895A /* NXOAuth2Connection.m in Sources */,
+				8FE5F5AD13CE404800CC895A /* NXOAuth2Constants.m in Sources */,
+				8FE5F5AE13CE404800CC895A /* NXOAuth2FileStreamWrapper.m in Sources */,
+				8FE5F5AF13CE404800CC895A /* NXOAuth2PostBodyPart.m in Sources */,
+				8FE5F5B013CE404800CC895A /* NXOAuth2PostBodyStream.m in Sources */,
+				8FE5F5B713CE40D700CC895A /* DeviantArt.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8FE5F57213CE3FD700CC895A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FE5F57313CE3FD700CC895A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8FE5F57B13CE3FD700CC895A /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FE5F57C13CE3FD700CC895A /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		8FE5F58113CE3FD700CC895A /* stashViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FE5F58213CE3FD700CC895A /* en */,
+			);
+			name = stashViewController.xib;
+			sourceTree = "<group>";
+		};
+		8FE5F5B213CE409A00CC895A /* MainWindow-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FE5F5B313CE409A00CC895A /* en */,
+			);
+			name = "MainWindow-iPad.xib";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8FE5F58413CE3FD700CC895A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8FE5F58513CE3FD700CC895A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		8FE5F58713CE3FD700CC895A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "stash/deviantART Stash-Prefix.pch";
+				INFOPLIST_FILE = "stash/deviantART Stash-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "deviantART Stash";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8FE5F58813CE3FD700CC895A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "stash/deviantART Stash-Prefix.pch";
+				INFOPLIST_FILE = "stash/deviantART Stash-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "deviantART Stash";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8FE5F55F13CE3FD700CC895A /* Build configuration list for PBXProject "deviantART Stash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FE5F58413CE3FD700CC895A /* Debug */,
+				8FE5F58513CE3FD700CC895A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FE5F58613CE3FD700CC895A /* Build configuration list for PBXNativeTarget "deviantART Stash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FE5F58713CE3FD700CC895A /* Debug */,
+				8FE5F58813CE3FD700CC895A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8FE5F55C13CE3FD700CC895A /* Project object */;
+}
