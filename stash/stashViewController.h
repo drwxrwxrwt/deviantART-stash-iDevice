@@ -18,6 +18,7 @@
 
 @property (nonatomic, retain) IBOutlet UIImageView *imageView;
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *spinner;
 @property (nonatomic, retain) UIPopoverController *popoverController;
 - (IBAction)useCamera: (id)sender;
 - (IBAction)usePhotos: (id)sender;

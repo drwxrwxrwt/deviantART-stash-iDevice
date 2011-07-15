@@ -13,7 +13,7 @@
 @implementation stashViewController
 
 @synthesize imageView, popoverController;
-@synthesize toolbar;
+@synthesize toolbar, spinner;
 
 
 - (void)dealloc
@@ -58,6 +58,10 @@
     [cameraButton release];
     [photosButton release];
     [stashButton release];
+    
+    [spinner stopAnimating];
+	spinner.hidden = TRUE;
+    
     [super viewDidLoad];
 }
 
@@ -204,7 +208,7 @@
         imagePicker.mediaTypes = [NSArray arrayWithObjects:
                                   (NSString *) kUTTypeImage,
                                   nil];
-        imagePicker.allowsEditing = YES;
+        imagePicker.allowsEditing = NO;
         [self presentModalViewController:imagePicker
                                 animated:YES];
         [imagePicker release];
@@ -213,6 +217,8 @@
 }
 
 - (IBAction) useStash: (id)sender {
+    spinner.hidden = FALSE;
+	[spinner startAnimating];
     DeviantArt *dA = [stashAppDelegate currentDelegate].deviantArt;
     dA.delegate = self;
     [dA postImage:[imageView image] withTitle:@"Untitled@"];
@@ -222,9 +228,18 @@
 
 
 #pragma mark - DeviantArtDelegate
-- (void)stashWasPostedWithResponse:(NSDictionary *)jsonData{  
+- (void)stashWasPostedWithResponse:(NSDictionary *)jsonData{
+    [spinner stopAnimating];
+	spinner.hidden = TRUE;
     NSLog(@"posted to http://www.deviantart.com/deviation/%@", [jsonData objectForKey:@"stashid"]);
-    
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle: @"Stashing sucess"
+                          message: @"Finished with upload"\
+                          delegate: nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil];
+    [alert show];
+    [alert release];
     
     //self.output.text = [NSString stringWithFormat:@"posted to http://www.deviantart.com/deviation/%@",
     //                                              [jsonData objectForKey:@"stashid"]];

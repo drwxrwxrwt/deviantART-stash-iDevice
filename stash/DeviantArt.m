@@ -72,7 +72,13 @@ NSString *const kDAOEMimeBoundary = @"daStashAppIsFun";
 - (void)postImage:(UIImage *)img withTitle:(NSString *)title{
   self.imageToUpload = img;
   self.titleForUpload = title;
-  [self.oauthClient requestAccess];
+  if(self.oauthClient.accessToken){
+      NSLog(@"postImage -- Got access token %@", self.oauthClient.accessToken);
+      [self sendPostImageRequest];
+  }else{
+      NSLog(@"postImage -- Requesting upload");
+      [self.oauthClient requestAccess];
+  }
 }
 
 #pragma mark - private methods
@@ -114,6 +120,7 @@ NSString *const kDAOEMimeBoundary = @"daStashAppIsFun";
 
 - (void)sendPostImageRequest{
   if(self.imageToUpload){
+    NSLog(@"sendPostImageRequest -- Uploading Image");
     NSMutableURLRequest *req = [[[NSMutableURLRequest alloc] 
                                 initWithURL:[NSURL URLWithString:kDAStashURL] 
                                 cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData 
@@ -142,6 +149,19 @@ NSString *const kDAOEMimeBoundary = @"daStashAppIsFun";
                                requestParameters:nil
                                      oauthClient:self.oauthClient 
                                         delegate:self] autorelease];
+  } else {
+      
+      /*
+      NSLog(@"sendPostImageRequest -- No image to upload");
+      UIAlertView *alert = [[UIAlertView alloc]
+                            initWithTitle: @"Stashing failed"
+                            message: @"No image selected"\
+                            delegate: nil
+                            cancelButtonTitle:@"OK"
+                            otherButtonTitles:nil];
+      [alert show];
+      [alert release];
+       */
   }
   self.imageToUpload = nil;
 }
@@ -168,19 +188,37 @@ NSString *const kDAOEMimeBoundary = @"daStashAppIsFun";
 - (void)oauthConnection:(NXOAuth2Connection *)connection 
      didReceiveResponse:(NSURLResponse *)response{
   NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+  
   if ([httpResponse statusCode] >= 400) {
-//    NSLog(@"response erred with code %d", [httpResponse statusCode]);
+      
+    NSString *err_code = [NSString stringWithFormat:@"Stashing failed. server error %d", [httpResponse statusCode]];
+    NSLog(@"response erred with error: %@", err_code);
+      UIAlertView *alert = [[UIAlertView alloc]
+                            initWithTitle: @"Stashing failed"
+                            message: err_code\
+                            delegate: nil
+                            cancelButtonTitle:@"OK"
+                            otherButtonTitles:nil];
+      [alert show];
+      [alert release];
   }else{
-//    NSLog(@"response succeeded with code %d", [httpResponse statusCode]);
+    NSLog(@"response succeeded with code %d", [httpResponse statusCode]);
   }
 }
 
 - (void)oauthConnection:(NXOAuth2Connection *)connection 
       didFinishWithData:(NSData *)data{
+  NSLog(@"finished with data");
   if(self.delegate){
     NSDictionary *respJson = [data objectFromJSONData];
     [self.delegate stashWasPostedWithResponse:respJson];
   }
+}
+
+- (void)oauthConnection:(NXOAuth2Connection *)connection
+           didSendBytes:(unsigned long long)bytesSend
+                ofTotal:(unsigned long long)bytesTotal{
+    NSLog(@"going... %llu bytes sent out of %llu", bytesSend, bytesTotal);
 }
 
 @end
